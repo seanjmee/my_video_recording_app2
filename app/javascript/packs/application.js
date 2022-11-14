@@ -12,3 +12,12 @@ import * as bootstrap from "bootstrap"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import { initRecordVideo } from '../components/record_video';
+document.addEventListener('turbolinks:load', () => {
+    if(document.querySelector("#live")) {
+        initRecordVideo()
+    }
+})
+
+
