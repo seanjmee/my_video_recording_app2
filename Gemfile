@@ -8,6 +8,11 @@ gem "rails", "~> 7.0.4"
 
 gem "bootstrap"
 
+gem "dotenv-rails", groups: [:development, :test]
+
+gem "cloudinary", "~> 1.16.0"
+
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -77,3 +82,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "cssbundling-rails", "~> 1.1"
+
+gem "jsbundling-rails", "~> 1.0"

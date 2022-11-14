@@ -2,10 +2,19 @@
   "name": "my-video-recording-app",
   "private": true,
   "dependencies": {
-    "@rails/ujs": "^6.0.0",
-    "turbolinks": "^5.2.0",
+    "@hotwired/stimulus": "^3.1.1",
+    "@popperjs/core": "^2.11.6",
+    "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
-    "@rails/actioncable": "^6.0.0"
+    "@rails/ujs": "^6.0.0",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.10.2",
+    "esbuild": "^0.15.13",
+    "sass": "^1.56.1",
+    "turbolinks": "^5.2.0"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets"
+  }
 }
