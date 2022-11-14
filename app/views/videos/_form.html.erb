@@ -19,5 +19,26 @@
 <button id="start">Start</button>
 <button id="stop">Stop and save</button>
 <div>
-  <video style="border: 1px solid black" id="live" width="300" height="200" autoplay muted></video>
+  <video id="live" style="border: 1px solid black" id="live" width="300" height="200" autoplay muted></video>
 </div>
+
+<script charset="utf-8">
+    (async () => {
+      const startBtn = document.querySelector('#start');
+      const stopBtn = document.querySelector('#stop');
+      const liveVideo = document.querySelector('#live');
+
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true});
+      liveVideo.srcObject = stream;
+
+      startBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          // start recording
+      });
+
+      stopBtn.addEventListener(('click'), function(e) {
+          e.preventDefault();
+          // stop recording
+      });
+        })();
+</script>
